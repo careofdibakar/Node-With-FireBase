@@ -1,0 +1,22 @@
+User.create = async (newUser) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const docRef = addDoc(collection(db, "users"), {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+      });
+
+      console.log("Document written with ID: ", docRef.id);
+      res.status(201).send({
+        message: "User created successfully",
+        documentId: docRef.id,
+      });
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      res.status(500).send({
+        error: "Error adding document",
+        details: error.message,
+      });
+    }
+  });
+};

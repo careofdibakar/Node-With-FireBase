@@ -1,0 +1,18 @@
+{
+  "name": "Node-with-firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dibakar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "firebase": "^10.14.0",
+    "nodemon": "^3.1.7"
+  }
+}
